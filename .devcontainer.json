@@ -1,0 +1,19 @@
+{
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:0-ubuntu-22.04",
+  "containerEnv": {
+    "DFX_INSTALL_ROOT": "/home/vscode/.local/bin"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dfinity-foundation.vscode-motoko",
+        "dtsvet.vscode-wasm"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "postCreateCommand": "sh -ci \"$(curl -fsSL https://internetcomputer.org/install.sh)\"",
+  "remoteUser": "vscode"
+}
